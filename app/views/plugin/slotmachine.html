@@ -1,0 +1,10 @@
+<div class="slotContent">
+  <h1 class="title" ng-bind="title" ng-if="title"></h1>
+  <div class="slotMachine">
+    <div class="slot" ng-repeat="obj in choices" ng-bind="obj.name" emit-on-finished></div>
+  </div>
+  <div class="btn-group btn-group-justified btn-group-casino" role="group">
+    <div id="slotMachineButtonShuffle" type="button" class="btn btn-primary btn-lg">开始</div>
+    <div id="slotMachineButtonStop" type="button" class="btn btn-primary btn-lg">停止</div>
+  </div>
+</div>

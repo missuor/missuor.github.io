@@ -1,0 +1,13 @@
+<div class="archives">
+  <div class="archive" ng-repeat="data in archives">
+    <h4 class="head">
+      <span ng-bind="data.month"></span>
+      <span ng-bind="data.records.length"></span>篇文章
+    </h4>
+    <ul class="items">
+      <li id="blog.id" class="img" ng-repeat="blog in data.records">
+        <a ui-sref="blog.detail(blog.stateParams)" target="_blank" ng-bind="blog.title"></a>
+      </li>
+    </ul>
+  </div>
+</div>

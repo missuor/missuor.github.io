@@ -1,0 +1,40 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ui-sref="home">Missuor</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse" auto-in>
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a ui-sref="blog.list">博客</a>
+        </li>
+        <li>
+          <a ui-sref="blog.archives">归档</a>
+        </li>
+        <li>
+          <a ui-sref="tag.list">标签</a>
+        </li>
+        <li ng-if="globals.user.is_active">
+          <a ui-sref="blog.add">新建</a>
+        </li>
+        <!-- <li>
+          <a ui-sref="school.student.casino">点名</a>
+        </li> -->
+        <li ui-sref-active="active">
+          <a login-dialog></a>
+        </li>
+        <li ng-if="globals.user.is_superuser">
+          <a ui-sref="admin">设置</a>
+        </li>
+      </ul>
+      <form class="nav navbar-form navbar-right" role="search">
+        <input name="s" type="text" class="form-control">
+      </form>
+    </div>
+  </div>
+</nav>

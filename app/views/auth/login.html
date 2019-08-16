@@ -1,0 +1,30 @@
+<div class="login user-select-none">
+  <h2 class="header">用户登录</h2>
+  <form class="form" ng-submit="login()">
+    <div class="form-group">
+      <input type="text" class="form-control field input-lg" id="username" name="username" ng-model="user.username" placeholder="用户名" readonly>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control field input-lg" id="password" name="password" ng-model="user.password" placeholder="密码" readonly>
+    </div>
+    <div class="form-group input-group" ng-show="show_captcha">
+      <input type="text" class="form-control input-lg" id="captcha" name="captcha" ng-model="user.captcha" placeholder="验证码" readonly>
+      <span class="input-group-addon">1234</span>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-default field button btn-lg" ng-class="{disabled: !enableSubmit()}" ng-disabled="!enableSubmit()">登 录</button>
+    </div>
+    <div class="form-group clearfix">
+      <a class="register pull-left" ui-sref="auth.register">立即注册</a>
+      <a class="forget-password pull-right" href="/password-resset">忘记密码</a>
+    </div>
+    <div class="form-group">
+      <span class="js-toggle-sns-buttons">社交帐号登录</span>
+      <span class="sns-buttons">
+        <a title="微信登录" class="sns-wechat" href="#"><i class="fa fa-wechat"></i></span>
+      <a title="微博登录" class="sns-weibo" href="#"><i class="fa fa-weibo"></i></span>
+      <a title="QQ 登录" class="sns-qq" href="https://graph.qq.com/oauth/show?which=ConfirmPage&response_type=code&client_id=101240368&scope=all&redirect_uri=http://www.missuor.com"><i class="fa fa-qq"></i></a>
+      </span>
+    </div>
+  </form>
+</div>

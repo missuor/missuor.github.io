@@ -1,0 +1,26 @@
+<div class="post-body">
+  <div class="main">
+    <div class="post-list">
+      <article class="post post-with-tags" ng-repeat="blog in blogs">
+        <p class="post-meta">
+          <!-- <span class="post-meta-author" ng-bind="blog.owner.full_name" ui-sref="user({'username':blog.owner.username})"></span> -->
+          <span class="post-meta-ctime" ng-bind="blog.create_time|date:'yyyy-MM-dd'"></span>
+        </p>
+        <h4 class="post-title" ui-sref="blog.detail(blog.stateParams)" ng-bind="blog.title"></h4>
+        <!--
+          <p class="post-abstract" ng-bind="blog.abstract"></p>
+          <p class="post-tags">
+            <a class="tag" ui-sref="blog.detail(blog.stateParams)">
+              <span class="tag_name" ng-bind="'查看'"></span>
+            </a>
+            <a class="tag" ui-sref="blog.edit(blog.stateParams)">
+              <span class="tag_name" ng-bind="'编辑'"></span>
+            </a>
+            <a class="tag" ui-sref="blog.delete(blog.stateParams)">
+              <span class="tag_name" ng-bind="'删除'"></span>
+            </a>
+          </p> -->
+      </article>
+    </div>
+  </div>
+</div>

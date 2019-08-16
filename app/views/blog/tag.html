@@ -1,0 +1,11 @@
+<div class="post-body">
+  <div class="main">
+    <div class="post-list">
+      <article class="post post-with-tags" ng-repeat="blog in blogs">
+        <header class="post-title" ui-sref="blog.detail(blog.stateParams)">
+          <strong ng-bind="blog.title"></strong>
+        </header>
+      </article>
+    </div>
+  </div>
+</div>
